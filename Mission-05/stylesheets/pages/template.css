@@ -1,0 +1,239 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* ---------------------------------------------- */
+/* 헤더                                            */
+/* ---------------------------------------------- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1020px;
+  margin: auto;
+}
+.header__inner button:focus-visible {
+  outline: none;
+  box-shadow: 1px -2px 3px 4px var(--color-red-500);
+  border-radius: 4px;
+}
+
+.button--category {
+  background-image: url(../../assets/icon/hamburger.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 32%;
+  font-weight: 400;
+  font-size: 12px;
+  background-color: var(--color-blue-600);
+  color: var(--color-white);
+  width: 110px;
+  height: 116px;
+  cursor: pointer;
+  border: none;
+  padding-top: 44px;
+}
+
+/* ---------------------------------------------- */
+/* 내비게이션                                        */
+/* ---------------------------------------------- */
+.icon {
+  font-size: 20px;
+  position: relative;
+  top: 4px;
+  padding-right: 5px;
+  margin-left: 12px;
+}
+.navigation {
+  position: absolute;
+  top: 111px;
+}
+.navigation h2 {
+  display: none;
+}
+.navigation__list a {
+  text-decoration: none;
+  display: block;
+  color: var(--color-blue-600);
+}
+
+.navigation__item:first-of-type a {
+  background: url(../../assets/icon/more-right-active.svg) no-repeat right;
+}
+
+.navigation__list {
+  width: 180px;
+  height: 500px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  box-shadow: 0px 9px 15px -3px var(--color-gray-200);
+}
+
+.depth1 {
+  width: 180px;
+  font-size: 12px;
+  line-height: 120%;
+  /* display: none; */
+}
+
+.is--active {
+  display: block;
+}
+
+.depth2 {
+  width: 180px;
+  height: 500px;
+  position: absolute;
+  left: 180px;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  box-shadow: 0px 9px 15px -3px var(--color-gray-200);
+}
+
+.depth3 {
+  width: 180px;
+  height: 500px;
+  position: absolute;
+  left: 180px;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 9px 15px -3px var(--color-gray-200);
+}
+
+.navigation__item {
+  width: 170px;
+  height: 20px;
+  font-size: 12px;
+  margin: 5px;
+  padding: 2px 2px 2px 6px;
+}
+
+.depth2::before {
+  content: '';
+  position: absolute;
+  left: -250px;
+  bottom: 250px;
+  height: 2px;
+  width: 500px;
+  background: var(--color-gray-200);
+  transform: rotate(90deg);
+}
+.depth2::after {
+  content: '';
+  position: absolute;
+  left: -70px;
+  bottom: 250px;
+  height: 2px;
+  width: 500px;
+  background: var(--color-gray-200);
+  transform: rotate(90deg);
+}
+
+/* ---------------------------------------------- */
+/* 메인 콘텐츠                                       */
+/* ---------------------------------------------- */
+/* 메인 콘텐츠 영역의 최소 높이 설정 */
+.main {
+  min-height: 52rem;
+}
+
+/* ---------------------------------------------- */
+/* 푸터                                            */
+/* ---------------------------------------------- */
+.footer__top {
+  height: 40px;
+  background-color: var(--color-gray-200);
+  color: var(--color-gray-800);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem;
+}
+.divider__txt {
+  padding: 5px 14px 6px;
+}
+.divider__txt b {
+  font-weight: 700;
+}
+.footer__mid {
+  font-size: 16px;
+  height: 207px;
+  padding: 32px;
+  line-height: 120%;
+  background-color: var(--color-gray-100);
+  color: var(--color-gray-800);
+  text-align: left;
+  display: flex;
+  gap: 62px;
+  justify-content: center;
+}
+.footer__mid--service {
+  line-height: 180%;
+}
+.footer__mid--ServiceCenter {
+  line-height: 180%;
+}
+.footer__mid--ServiceCenter b {
+  font-weight: 700;
+  font-size: 3em;
+  line-height: 3.5rem;
+}
+.footer__mid--ServiceCenter a {
+  text-decoration-line: none;
+  color: var(--color-gray-800);
+}
+
+.footer__mid--financial {
+  width: 282px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+}
+.footer__mid--financial b {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 200%;
+}
+
+.footer__bottom {
+  height: 102px;
+  font-size: 12px;
+  background-color: var(--color-gray-900);
+  color: var(--color-gray-200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__bottom--container {
+  height: 70px;
+  display: flex;
+}
+.footer__bottom--p {
+  text-align: left;
+  line-height: 1.2;
+  width: 860px;
+  height: 70px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+}
+.footer__bottom--icon {
+  gap: 10px;
+  order: 2;
+  align-self: flex-end;
+}
+.instagram {
+  background: linear-gradient(174.12deg, #2856eb 5.61%, #bc1888 22.32%, #cc2366 36.16%, #dc2743 51.91%, #e6683c 73.38%, #f09433 91.99%);
+  border-radius: 50%;
+}

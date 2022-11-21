@@ -1,0 +1,197 @@
+* {
+  box-sizing: border-box;
+}
+/* 1. 헤더 */
+.row {
+  width: 100%;
+  height: 34px;
+  background-color: var(--color-gray-100);
+}
+.wrap {
+  width: 1020px;
+  margin: 0 auto;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 9px;
+}
+nav ul li {
+  margin-right: 8px;
+}
+/* 2. nav */
+.nav-container {
+  height: 116px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 110px 40px 200px 2fr 1fr repeat(2, 60px);
+  grid-template-rows: 1fr 26px;
+  grid-template-areas:
+    'button--category . logo    search  search  myCoupang addToCart'
+    'button--category . subLink subLink subLink subLink subLink';
+}
+/* 햄버거 네비게이션 */
+.button__category {
+  grid-area: button--category;
+}
+.button__category--btn {
+  background-image: url(../../assets/icon/hamburger.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 32%;
+  font-weight: 400;
+  font-size: 12px;
+  background-color: var(--color-blue-600);
+  color: var(--color-white);
+  width: 110px;
+  height: 116px;
+  cursor: pointer;
+  border: none;
+  padding-top: 44px;
+}
+.logo {
+  grid-area: logo;
+  align-items: center;
+  justify-items: center;
+}
+.logo img {
+  width: 176px;
+}
+/* 검색 */
+.search {
+  width: 516px;
+  height: 40px;
+  grid-area: search;
+  display: flex;
+  border: 1px solid var(--color-blue-600);
+}
+.search__catergory {
+  color: var(--color-gray-700);
+  width: 135px;
+  height: 40px;
+  padding-left: 8px;
+  border: none;
+  appearance: none;
+  background: url(../../assets/icon/SearchDownArrow.svg) no-repeat right;
+}
+.search__input {
+  color: var(--color-gray-600);
+  border: none;
+  padding: 5px;
+}
+.btn {
+  outline: 0;
+  border: none;
+  appearance: none;
+  background: none;
+  cursor: pointer;
+  font-size: 12px;
+}
+.mic__btn {
+  width: 40px;
+  height: 40px;
+}
+.search__btn {
+  width: 40px;
+  height: 40px;
+}
+
+/* 마이쿠팡 */
+.myCoupang {
+  grid-area: myCoupang;
+  margin: auto;
+  text-align: center;
+  position: relative;
+}
+.myCoupang__dropDown {
+  display: none;
+  position: absolute;
+  background-color: var(--color-white);
+  width: 90px;
+  height: 137px;
+  left: -27px;
+  border: 1px solid var(--color-gray-300);
+}
+.is--active .myCoupang__dropDown {
+  display: block;
+}
+.myCoupang__dropDown--item {
+  margin: 25px 15px 20px 15px;
+  font-size: 12px;
+}
+
+.myCoupang__btn {
+  background-image: url(../../assets/icon/my-coupang.svg);
+  background-repeat: no-repeat;
+  background-size: 28px;
+  background-position: 50% 32%;
+  width: 60px;
+  height: 60px;
+  font-weight: 400;
+  font-size: 12px;
+  padding-top: 44px;
+}
+
+/* 장바구니 */
+.cart {
+  grid-area: addToCart;
+  text-align: center;
+  position: relative;
+}
+.cartCount {
+  position: absolute;
+  top: 8%;
+  left: 53%;
+  background-color: var(--color-blue-600);
+  width: 18px;
+  height: 18px;
+  color: var(--color-white);
+  border-radius: 50%;
+  font-size: 12px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cart__dropDown {
+  display: none;
+  position: absolute;
+  background-color: var(--color-white);
+  width: 288px;
+  height: 99px;
+  left: -240px;
+  border: 1px solid var(--color-gray-300);
+}
+.cart--empty .cart__dropDown {
+  display: block;
+}
+
+.cart__dropDown--item {
+  margin: 42px 46px 36px 46px;
+  font-size: 14px;
+}
+.cart__btn {
+  background-image: url(../../assets/icon/cart.svg);
+  background-repeat: no-repeat;
+  background-size: 28px;
+  background-position: 50% 32%;
+  width: 60px;
+  height: 60px;
+  font-weight: 400;
+  font-size: 12px;
+  padding-top: 44px;
+}
+
+/* 밑에 서브 링크들 */
+.typeNavigation {
+  grid-area: subLink;
+  display: lnline-block;
+  font-size: 12px;
+}
+.typeNavigation__item {
+  padding: 6px 14px;
+}

@@ -1,0 +1,170 @@
+/* 카테고리별 추천 광고상품 */
+/*
+1. 카테고리별 제목
+2. 메인 카테고리
+3. 메인 카테고리 왼쪽
+4. 메인 카테고리 중간
+5. 메인 카테고리 오른쪽
+*/
+#wrap {
+  width: 1020px;
+  margin: 0 auto;
+}
+/* 1. 카테고리별 제목 */
+.HotTrendSub {
+  font-size: 1em;
+}
+.HotTrendMain {
+  margin-top: 0;
+}
+.HotTrendBlue {
+  color: var(--color-blue-600);
+}
+/* 2. 메인 카테고리 */
+.article {
+  display: flex;
+  gap: 16px;
+  height: 634px;
+  margin: 0 0 24px 0;
+}
+.article__brown {
+  border-top: 2px solid var(--color-brown-300);
+  border-bottom: 2px solid var(--color-brown-300);
+}
+.article__green {
+  border-top: 2px solid var(--color-green-700);
+  border-bottom: 2px solid var(--color-green-700);
+}
+.article-item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.category-Heading-item {
+  width: 140px;
+}
+/* 3. 메인 카테고리 왼쪽 */
+.main-category {
+  font-size: 28px;
+  height: 28px;
+  position: relative;
+  left: 24px;
+  top: 12px;
+}
+.brown {
+  color: var(--color-brown-300);
+}
+.green {
+  color: var(--color-green-700);
+}
+.main-category-link {
+  color: var(--color-gray-700);
+  position: relative;
+  font-size: 17px;
+  left: 24px;
+  top: 0px;
+}
+.hotKeyword {
+  font-size: 18px;
+  margin: 0;
+  position: relative;
+  left: 24px;
+  top: 88px;
+}
+.hashtag__collection {
+  width: 124px;
+  height: 220px;
+  position: relative;
+  left: 24px;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+.hashtag {
+  height: 26px;
+  border: 1px solid var(--color-gray-400);
+  font-size: 0.7em;
+  padding: 6px 10px;
+}
+/* 4. 메인 카테고리 중간 */
+.mainItem__btn {
+  width: 260px;
+  height: 90px;
+  position: relative;
+  left: 32px;
+  top: -159px;
+  text-align: center;
+  line-height: 50%;
+}
+.brown-bg {
+  background-color: var(--color-brown-300);
+}
+.green-bg {
+  background-color: var(--color-green-700);
+}
+
+.mainItem__btn_head {
+  color: var(--color-white);
+  font-size: 1.1em;
+  margin: 24px 27px;
+  font-weight: 700;
+}
+.mainItem__btn_text {
+  color: var(--color-white);
+  margin-top: 24px;
+  font-size: 1em;
+  font-weight: 400;
+}
+.mainItem__paging {
+  width: 50px;
+  height: 30px;
+  position: relative;
+  left: -166px;
+  top: -65px;
+}
+.mainItem__list {
+  display: flex;
+  gap: 8px;
+}
+.mainItem__list .active a {
+  background-color: var(--color-gray-700);
+}
+.mainItem__list li a {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: block;
+  background-color: var(--color-gray-600);
+}
+
+/* 5. 메인 카테고리 오른쪽 */
+.right {
+  justify-content: center;
+}
+.category-item {
+  width: 160px;
+  height: 300px;
+}
+.category-item-img {
+  width: 160px;
+  height: 160px;
+}
+.category-item-desc {
+  width: 152px;
+  height: 34px;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.category-item-discount {
+  color: var(--color-red-500);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+}
+.category-item-price {
+  font-weight: 700;
+  font-size: 18px;
+}
