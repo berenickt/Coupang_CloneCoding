@@ -71,11 +71,11 @@
   --font-family: 'Noto Sans KR', sans-serif;
 }
 
-html{
+html {
   font-size: var(--base-size);
 }
 
-body{
+body {
   color: var(--color-black);
   background: var(--color-white);
 }

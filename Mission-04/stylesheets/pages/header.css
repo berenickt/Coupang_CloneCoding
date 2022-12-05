@@ -1,197 +1,351 @@
-* {
-  box-sizing: border-box;
-}
-/* 1. 헤더 */
-.row {
-  width: 100%;
-  height: 34px;
-  background-color: var(--color-gray-100);
-}
-.wrap {
-  width: 1020px;
-  margin: 0 auto;
-}
-header {
-  display: flex;
-  justify-content: space-between;
-}
-nav ul {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 9px;
-}
-nav ul li {
-  margin-right: 8px;
-}
-/* 2. nav */
-.nav-container {
-  height: 116px;
-  display: grid;
-  align-items: center;
-  grid-template-columns: 110px 40px 200px 2fr 1fr repeat(2, 60px);
-  grid-template-rows: 1fr 26px;
-  grid-template-areas:
-    'button--category . logo    search  search  myCoupang addToCart'
-    'button--category . subLink subLink subLink subLink subLink';
-}
-/* 햄버거 네비게이션 */
-.button__category {
-  grid-area: button--category;
-}
-.button__category--btn {
-  background-image: url(../../assets/icon/hamburger.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 32%;
-  font-weight: 400;
-  font-size: 12px;
-  background-color: var(--color-blue-600);
-  color: var(--color-white);
-  width: 110px;
-  height: 116px;
-  cursor: pointer;
-  border: none;
-  padding-top: 44px;
-}
-.logo {
-  grid-area: logo;
-  align-items: center;
-  justify-items: center;
-}
-.logo img {
-  width: 176px;
-}
-/* 검색 */
-.search {
-  width: 516px;
-  height: 40px;
-  grid-area: search;
-  display: flex;
-  border: 1px solid var(--color-blue-600);
-}
-.search__catergory {
-  color: var(--color-gray-700);
-  width: 135px;
-  height: 40px;
-  padding-left: 8px;
-  border: none;
-  appearance: none;
-  background: url(../../assets/icon/SearchDownArrow.svg) no-repeat right;
-}
-.search__input {
-  color: var(--color-gray-600);
-  border: none;
-  padding: 5px;
-}
-.btn {
-  outline: 0;
-  border: none;
-  appearance: none;
-  background: none;
-  cursor: pointer;
-  font-size: 12px;
-}
-.mic__btn {
-  width: 40px;
-  height: 40px;
-}
-.search__btn {
-  width: 40px;
-  height: 40px;
+/* 헤더 */
+
+/* 로그인바 */
+.loginBar {
+  background: var(--color-gray-100);
 }
 
-/* 마이쿠팡 */
+.loginBar__list {
+  width: 102rem;
+  margin: 0 auto 0;
+  display: flex;
+  flex-flow: row nowrap;
+  list-style: none;
+  padding: 0.5rem 0.4rem;
+}
+
+.loginBar__item:nth-child(n+4) {
+  order: -1;
+}
+
+.loginBar__item:first-child {
+  margin-left: auto;
+}
+
+.lgoinBar__link {
+  display: block;
+  padding: 0.5rem 0.4rem;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+/* 헤더 Inner  */
+.header__inner {
+  width: 102rem;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: auto 24.6rem 1fr auto auto;
+  grid-template-rows: 7.4rem 4.2rem;
+  grid-template-areas: 'buttonCategory brand searchForm myCoupang cart'
+                        'buttonCategory typeNavigation typeNavigation myCoupang cart';
+}
+
+/* 로고 */
+.brand {
+  grid-area: brand;
+  margin-top: 0;
+  margin-bottom: 0;
+  align-self: end;
+  padding-left: 4rem;
+  padding-right: 3rem;
+}
+
+.brand__link {
+  display: block;
+}
+
+.logo {
+  height: 4rem;
+}
+
+.logo--ir {
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+  background-size: contain;
+}
+
+.logo--colorful {
+  background-image: url(/assets/logo/logo.svg);
+}
+
+/* 카테고리 */
+.button--category {
+  grid-area: buttonCategory;
+  border: 0;
+  padding: 4.2rem 0 0 0;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  color: var(--color-white);
+  width: 11rem;
+  height: 11.6rem;
+  background: var(--color-blue-600) url(/assets/icon/hamburger.svg) no-repeat 50% 3rem;
+}
+
+/* 검색 폼 */
+.searchForm {
+  grid-area: searchForm;
+  align-self: end;
+}
+
+.searchForm fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.searchForm__wrapper {
+  height: 4rem;
+  border: 2px solid var(--color-blue-600);
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.formSelect {
+  position: relative;
+  border-right: 1px solid var(--color-gray-100);
+  height: 100%;
+
+}
+
+.formSelect__select {
+  appearance: none;
+  border: 0;
+  width: 13.5rem;
+  height: 100%;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  color: var(--color-gray-700);
+  padding-left: 1.2rem;
+}
+
+.formSelect .iconDown {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.formInput {
+  flex-grow: 1;
+  height: 100%;
+
+}
+
+.formInput__input {
+  border: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0.8rem 1rem 1.3rem;
+}
+
+.formInput__input::placeholder {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  color: var(--color-gray-700);
+}
+
+.button--search, .button--voiceSearch {
+  border: 0;
+  padding: 0;
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+}
+
+.button--search {
+  order: 1;
+  background: url(/assets/icon/search.svg) no-repeat 50% 50%;
+}
+
+.button--voiceSearch {
+  background: url(/assets/icon/mic.svg) no-repeat 50% 50%;
+}
+
+/* 마이쿠팡 영역 */
 .myCoupang {
   grid-area: myCoupang;
-  margin: auto;
-  text-align: center;
+  margin-left: 0.6rem;
+  font-size: 1.2rem;
+  line-height: 1.2;
   position: relative;
+  align-self: center;
 }
-.myCoupang__dropDown {
-  display: none;
-  position: absolute;
+
+.button {
+  border: 0;
+  cursor: pointer;
+  user-select: none;
+  color: inherit;
+  background-color: transparent;
+
+}
+
+.button--myCoupang {
+  width: 5rem;
+  height: 6rem;
+  background: transparent url(/assets/icon/my-coupang.svg) no-repeat 50% 0.5rem;
+  padding: 3rem 0 0 0;
+}
+
+.myCoupang__list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
   background-color: var(--color-white);
-  width: 90px;
-  height: 137px;
-  left: -27px;
-  border: 1px solid var(--color-gray-300);
-}
-.is--active .myCoupang__dropDown {
-  display: block;
-}
-.myCoupang__dropDown--item {
-  margin: 25px 15px 20px 15px;
-  font-size: 12px;
-}
-
-.myCoupang__btn {
-  background-image: url(../../assets/icon/my-coupang.svg);
-  background-repeat: no-repeat;
-  background-size: 28px;
-  background-position: 50% 32%;
-  width: 60px;
-  height: 60px;
-  font-weight: 400;
-  font-size: 12px;
-  padding-top: 44px;
-}
-
-/* 장바구니 */
-.cart {
-  grid-area: addToCart;
-  text-align: center;
-  position: relative;
-}
-.cartCount {
   position: absolute;
-  top: 8%;
-  left: 53%;
-  background-color: var(--color-blue-600);
-  width: 18px;
-  height: 18px;
-  color: var(--color-white);
-  border-radius: 50%;
-  font-size: 12px;
-  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  flex-flow: column nowrap;
+  border: 1px solid var(--color-gray-300);
+  padding: 2rem 1.6rem;
+}
+
+.is--active .myCoupang__list {
   display: flex;
-  align-items: center;
-  justify-content: center;
 }
-.cart__dropDown {
+
+.myCoupang__list::before, .myCoupang__list::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.myCoupang__list::before {
+  border-left: 5px solid transparen;
+  border-right: 5px solid transparen;
+  border-bottom: 8px solid var(--color-gray-500);
+  top: -0.8rem;
+}
+
+.myCoupang__list::after {
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparen;
+  border-bottom: 8px solid var(--color-white);
+  top: -0.7rem;
+}
+
+
+.myCoupang__item {
+  margin: 0.2rem 0;
+}
+
+
+.myCoupang__link {
+  white-space: nowrap;
+  display: block;
+  padding: 0.4rem;
+}
+
+/* 장바구니 영역 */
+.cart {
+  grid-area: cart;
+  align-self: center;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  margin-left: 0.6rem;
+  position: relative;
+}
+
+.cart__buttonWrapper {
+  position: relative;
+}
+
+.button--cart {
+  width: 5rem;
+  height: 6rem;
+  padding: 3rem 0 0 0;
+  background: url(/assets/icon/cart.svg) no-repeat 50% 0.5rem;
+}
+
+.cartProductCount {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--color-blue-600);
+  color: var(--color-white);
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.cart__detail {
   display: none;
   position: absolute;
-  background-color: var(--color-white);
-  width: 288px;
-  height: 99px;
-  left: -240px;
+  right: 0;
+  background: var(--color-white);
   border: 1px solid var(--color-gray-300);
 }
-.cart--empty .cart__dropDown {
+
+.cart__empty, .cart__detail {
   display: block;
 }
 
-.cart__dropDown--item {
-  margin: 42px 46px 36px 46px;
-  font-size: 14px;
-}
-.cart__btn {
-  background-image: url(../../assets/icon/cart.svg);
-  background-repeat: no-repeat;
-  background-size: 28px;
-  background-position: 50% 32%;
-  width: 60px;
-  height: 60px;
-  font-weight: 400;
-  font-size: 12px;
-  padding-top: 44px;
+.cart__detail::before, .cart__detail::after {
+  content: "";
+  position: absolute;
 }
 
-/* 밑에 서브 링크들 */
-.typeNavigation {
-  grid-area: subLink;
-  display: lnline-block;
-  font-size: 12px;
+.cart__detail::before {
+  top: -0.8rem;
+  right: 1.8rem;
+  border-left: 5px solid transparen;
+  border-right: 5px solid transparen;
+  border-bottom: 8px solid var(--color-gray-500);
 }
+
+.cart__detail::after {
+  top: -0.7rem;
+  right: 1.9rem;
+  border-left: 4px solid transparen;
+  border-right: 4px solid transparen;
+  border-bottom: 8px solid var(--color-white);
+}
+
+.cart__empty {
+  white-space: nowrap;
+  padding: 3.6rem 4.6rem;
+}
+
+/* 유형별 링크 목록 */
+.typeNavigation {
+  grid-area: typeNavigation;
+  align-self: center;
+
+}
+
+.typeNavigation__list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 0 3.6rem;
+  font-size: 0;
+}
+
 .typeNavigation__item {
-  padding: 6px 14px;
+  display: inline-block;
+  margin-left: 0.2rem;
+}
+
+.typeNavigation__item:nth-child(n+2) {
+  margin-left: 0.2rem;
+}
+
+.typeNavigation__link {
+  font-size: 1.2rem;
+  line-height: 1.2;
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+}
+
+.badge--rocket {
+  margin-right: 0.4rem;
+}
+
+.badge--new {
+  margin-left: 0.4rem;
 }
